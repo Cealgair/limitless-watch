@@ -1,6 +1,6 @@
 # Limitless Watch: self-hosted Limitless scraper for Discord
 
-Limitless Watch is a proof-of-concept bot designed send updates to a Discord server whenever [Limitless](limitlesstcg.com) updates one of its sets databases or tournament databases.
+Limitless Watch is a proof-of-concept bot designed to send updates to a Discord server whenever [Limitless](limitlesstcg.com) updates one of its sets databases or tournament databases.
 
 ## Usage
 
