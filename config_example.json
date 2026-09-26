@@ -1,0 +1,16 @@
+[
+	{
+		"webhook_url": "...",
+		"webhook_parameters": {
+			"username": "Limitless Watch",
+			"avatar_url": null,
+			"color": 8411391
+		},
+		"filter_mode": "whitelist",
+		"filter_list": [
+			"ptcg intl",
+			"ptcg jpn",
+			"ptcg tournament"
+		]
+	}
+]
