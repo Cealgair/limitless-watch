@@ -13,6 +13,10 @@ from time import sleep, gmtime, strftime
 import os
 from copy import deepcopy
 
+from sys import stderr
+ERRFILE = open("err.txt","w",buffering=1)
+stderr.write = ERRFILE.write # this might not work for all versions of Python...
+
 VERBOSITY = False
 
 def print_log(text):
@@ -30,6 +34,7 @@ try:
     parser.add_argument('--verbose', action='store_true')
     if parser.parse_args().verbose:
         VERBOSITY = True
+        print("NOTE: --verbose only prints logs on the console. Errors should only appear in err.txt")
 except:
     print_log("Error: argparse not available, verbosity might not work")
 
@@ -522,7 +527,7 @@ while True:
                 continue
             with open(f"data/{filenames[x][which]}","w") as f:
                 json.dump(old_data[x][which], f,indent=2)
-            first_run[x][y]=False
+            first_run[x][which]=False
     new_data = deepcopy(zero_data)
     
     print_log(f'Sleeping for {sleep_hours} hours')
